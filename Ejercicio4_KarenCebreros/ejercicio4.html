@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Generador de Contraseñas</title>
+    <!-- Archivo CSS para los estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Contraseñas</h1>
+        <label for="num_palabras">Número de palabras permitidas (4-16):</label>
+
+         <!-- Menú desplegable para seleccionar el número de palabras para la contraseña-->
+        <select id="num_palabras">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected>6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+        </select>
+
+        <!-- Botón para generar la contraseña -->
+        <button id="generar_boton">Generar Contraseña</button>
+
+        <!-- Elemento donde se mostrará la contraseña generada -->
+        <p id="resultado"></p>
+    </div>
+
+     <!-- Footer -->
+     <footer>
+        <p>&copy; 2024 Karen Cebreros López - Generador de contraseñas. Todos los derechos reservados.</p>
+    </footer>
+
+     <!-- Archivo JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>

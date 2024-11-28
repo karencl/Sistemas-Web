@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Canvas</title>
+    <!-- Archivo CSS para los estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="instructions">Presiona la letra "o" para añadir hasta 4 círculos.</div>
+    
+    <script>
+        // Se obtiene el canvas
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let instructions = document.getElementById('instructions');
+
+        // Se ajusta el tamaño de acuerdo al tamaño de la ventana (es responsivo)
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Círculos
+        let circles = [];
+        const colors = ['#790051', '#300079', '#004179', '#00795b'];
+
+        // Función para crear los círculos (hasta 4)
+        function createCircle() {
+            if (circles.length < 4) {
+                let new_circle = {
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+
+                    // Velocidades
+                    dx: (Math.random() * 4) + 2,
+                    dy: (Math.random() * 4) + 2,
+                    radius: 40,
+
+                    color: colors[circles.length]
+                };
+                circles.push(new_circle);
+            }
+        }
+
+        // Evento para generar un nuevo círculo al presionar la tecla 'o'
+        window.addEventListener('keydown', (event) => {
+            if (event.key.toLowerCase() === 'o') {
+                createCircle();
+            }
+        });
+
+        // Función para dibujar un círculo
+        function drawCircle(circle) {
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2, false);
+            ctx.fillStyle = circle.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Función para actualizar la animación
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Dibujar y mover cada uno de los círculos
+            circles.forEach((circle) => {
+                drawCircle(circle);
+
+                // Rebotar en los bordes
+                if (circle.x + circle.radius > canvas.width || circle.x - circle.radius < 0) {
+                    circle.dx = -circle.dx;
+                }
+                if (circle.y + circle.radius > canvas.height || circle.y - circle.radius < 0) {
+                    circle.dy = -circle.dy;
+                }
+
+                // Actualizar su posición
+                circle.x += circle.dx;
+                circle.y += circle.dy;
+            });
+
+            // Repetir la animación
+            requestAnimationFrame(update);
+        }
+
+        // Se actualiza la animación
+        update();
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Karen Cebreros López - Canvas.</p>
+    </footer>
+</body>
+</html>
