@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Web l - Ejercicio 2</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/Users/karencl/Documents/Sistemas Web l/Ejercicio2_KarenCebreros/favicon.png" type="image/png">
+    <!-- Fuente de Google para la tipografía (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilo en CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        // Función para mostrar u ocultar el menú de navegación lateral desde el lado derecho
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.classList.contains('menu-active')) {
+                nav.classList.remove('menu-active');
+            } else {
+                nav.classList.add('menu-active');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header class="header">
+            <h1>Design l</h1>
+            <!-- Botón de menú -->
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+        </header>
+
+        <!-- Menú de navegación lateral -->
+        <nav class="side-menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Registro</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="main-content">
+            <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg?width=900" 
+                 alt="Interior Design" class="main-image">
+            
+            <div class="main-description">
+                <h2>Interior Design<br>New York</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+
+        <!-- Sección de tarjetas -->
+        <div class="cards">
+            <div class="card">
+                <img src="https://cdn-icons-png.freepik.com/512/3131/3131333.png" alt="Team Icon" class="card-icon">
+                <h3>OUR TEAM</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+
+            <div class="card">
+                <img src="https://png.pngtree.com/png-clipart/20230504/original/pngtree-project-management-line-icon-png-image_9137897.png" alt="Projects Icon" class="card-icon">
+                <h3>PROJECTS</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/83/83654.png" alt="Awards Icon" class="card-icon">
+                <h3>DISTINCTION</h3>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <section class="contact-form">
+            <form method="POST" action="/ruta-del-servidor">
+                <h2>Formulario de Contacto</h2>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <p>&copy; 2024 Karen Cebreros López. Sistemas Web l - Design l.</p>
+        </footer>
+    </div>
+</body>
+</html>

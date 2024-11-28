@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Web l - Design l</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/Users/karencl/Documents/Ejercicio1_KarenCebreros/favicon.png" type="image/png">
+    <!-- Fuente de Google para la tipografía (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Función para mostrar u ocultar el menú de navegación
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif; background-color: #F6DCD7; color: #333; margin: 0; padding: 0;">
+
+    <div style="max-width: 1500px; margin: 0 auto; padding: 20px;">
+        <!-- Encabezado -->
+        <header style="
+            background-color: #F7F7F7; 
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: left; 
+            position: relative; 
+            margin-bottom: 20px;">
+            
+            <h1 style="margin: 0; font-size: 30px;">Design l</h1>
+            
+            <!-- Botón de menú -->
+            <button onclick="toggleMenu()" style="
+                display: block; 
+                background-color: #E9B8AC; 
+                border: none; 
+                color: white; 
+                font-size: 24px; 
+                cursor: pointer; 
+                position: absolute; 
+                top: 20px; 
+                right: 20px; 
+                padding: 5px 15px; 
+                border-radius: 5px;">
+                ☰
+            </button>
+        </header>
+
+        <!-- Menú de navegación (oculto inicialmente) -->
+        <nav style="
+            display: none; 
+            background-color: #E9B8AC; 
+            padding: 10px; 
+            border-radius: 10px; 
+            margin-bottom: 20px;">
+            
+            <ul style="
+                list-style: none; 
+                display: flex; 
+                justify-content: space-around; 
+                padding: 0;">
+                
+                <li style="margin: 0 15px;">
+                    <a href="#" style="
+                        color: white; 
+                        text-decoration: none; 
+                        font-size: 18px; 
+                        padding: 8px 16px;">
+                        Inicio
+                    </a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="#" style="
+                        color: white; 
+                        text-decoration: none; 
+                        font-size: 18px; 
+                        padding: 8px 16px;">
+                        Servicios
+                    </a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="#" style="
+                        color: white; 
+                        text-decoration: none; 
+                        font-size: 18px; 
+                        padding: 8px 16px;">
+                        Contacto
+                    </a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="#" style="
+                        color: white; 
+                        text-decoration: none; 
+                        font-size: 18px; 
+                        padding: 8px 16px;">
+                        Registro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sección del contenido principal -->
+        <div style="display: flex; margin-bottom: 60px;">
+            <!-- Imagen principal -->
+            <img src="https://cdn.decorilla.com/online-decorating/wp-content/uploads/2022/11/Luxury-interior-design-home-designing-1-scaled.jpeg?width=900" 
+                 alt="Interior Design" style="
+                 width: 50%; 
+                 border-radius: 10px; 
+                 margin-right: 40px;">
+            
+            <!-- Descripción -->
+            <div style="width: 50%; padding-left: 40px;">
+                <h2 style="font-size: 36px; margin-bottom: 10px;">Interior Design<br>New York</h2>
+                <p style="font-size: 16px; line-height: 1.6;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sección de tarjetas -->
+        <div style="
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 60px;">
+            
+            <!-- Tarjeta del equipo -->
+            <div style="
+                background-color: #E9B8AC; 
+                padding: 40px; 
+                width: 30%; 
+                text-align: center; 
+                border-radius: 10px; 
+                margin-right: 40px;">
+                
+                <img src="https://cdn-icons-png.freepik.com/512/3131/3131333.png" 
+                     alt="Team Icon" style="
+                     width: 50px; 
+                     margin-bottom: 20px;">
+                
+                <h3 style="margin-bottom: 10px; font-size: 20px;">OUR TEAM</h3>
+                <p style="font-size: 14px; color: #777;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor...</p>
+            </div>
+
+            <!-- Tarjeta de proyectos -->
+            <div style="
+                background-color: #E9B8AC; 
+                padding: 40px; 
+                width: 30%; 
+                text-align: center; 
+                border-radius: 10px; 
+                margin-right: 40px;">
+                
+                <img src="https://png.pngtree.com/png-clipart/20230504/original/pngtree-project-management-line-icon-png-image_9137897.png" 
+                     alt="Projects Icon" style="
+                     width: 50px; 
+                     margin-bottom: 20px;">
+                
+                <h3 style="margin-bottom: 10px; font-size: 20px;">PROJECTS</h3>
+                <p style="font-size: 14px; color: #777;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor...</p>
+            </div>
+
+            <!-- Tarjeta de distinciones -->
+            <div style="
+                background-color: #E9B8AC; 
+                padding: 40px; 
+                width: 30%; 
+                text-align: center; 
+                border-radius: 10px;">
+                
+                <img src="https://cdn-icons-png.flaticon.com/512/83/83654.png" 
+                     alt="Awards Icon" style="
+                     width: 50px; 
+                     margin-bottom: 20px;">
+                
+                <h3 style="margin-bottom: 10px; font-size: 20px;">DISTINCTION</h3>
+                <p style="font-size: 14px; color: #777;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed do eiusmod tempor...</p>
+            </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <section style="margin-bottom: 40px;">
+            <form method="POST" action="/ruta-del-servidor" style="
+                display: flex; 
+                flex-direction: column; 
+                background: #F7F7F7; 
+                padding: 40px; 
+                border-radius: 10px;">
+                
+                <h2 style="padding-bottom: 20px;">Formulario de Contacto</h2>
+                
+                <!-- Campo para el nombre -->
+                <input type="text" placeholder="Nombre" required style="
+                    margin-bottom: 1rem; 
+                    padding: 1rem; 
+                    font-size: 1rem; 
+                    border: 1px solid #ccc; 
+                    border-radius: 5px;">
+                
+                <!-- Campo para el correo electrónico -->
+                <input type="email" placeholder="Correo Electrónico" required style="
+                    margin-bottom: 1rem; 
+                    padding: 1rem; 
+                    font-size: 1rem; 
+                    border: 1px solid #ccc; 
+                    border-radius: 5px;">
+                
+                <!-- Botón de enviar -->
+                <button type="submit" style="
+                    background-color: #E9B8AC; 
+                    color: white; 
+                    border: none; 
+                    padding: 1rem; 
+                    font-size: 1rem; 
+                    cursor: pointer; 
+                    border-radius: 5px;">
+                    Enviar
+                </button>
+            </form>
+        </section>
+
+        <!-- Pie de página -->
+        <footer style="
+            background-color: #F7F7F7; 
+            padding: 20px; 
+            text-align: center; 
+            border-radius: 10px; 
+            margin-top: 40px;">
+            
+            <p style="font-size: 14px; color: #777;">
+                &copy; 2024 Karen Cebreros López. Sistemas Web l - Design l.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
